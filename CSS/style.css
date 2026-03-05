@@ -2,62 +2,67 @@
 html {
     font-size: calc(12px + 0.390625vw);
 }
-body{
+
+body {
     font-family: initial;
 }
-a{
+
+a {
     text-decoration: none;
 }
-h2{
+
+h2 {
     font-size: 2.2rem;
     font-weight: bold;
     color: black;
 }
-button{
+
+button {
     border-radius: 20px;
     padding: 10px 20px 10px 20px;
     margin: 2.5vw 0 0 0;
     font-size: 1.1rem;
 }
+
 /* === TOPO === */
-header{
+header {
     padding: 2vw 10vw;
     background-color: #696865;
 }
 
-header nav{
+header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo-area{
+.logo-area {
     display: flex;
     align-items: center;
     gap: 2vw;
 }
 
-header h1{
+header h1 {
     color: #ffffff;
     font-size: 2rem;
     font-weight: normal;
 }
 
-header .date{
+header .date {
     color: #ffffff;
     font-size: 0.9rem;
 }
 
-header nav ul{
+header nav ul {
     display: flex;
 }
 
-header nav ul li{
+header nav ul li {
     margin-left: 5vw;
     list-style: none;
 }
 
-header nav ul li a{
+header nav ul li a {
     color: #ffffff;
     text-decoration: none;
     font-size: 0.9rem;
@@ -68,86 +73,70 @@ header nav ul li a{
 
 
 /* === BANNER === */
-section.banner h2{
-    margin: 2vw 0 2vw 0vw;
+section.banner h2 {
+    margin: 1.5rem;
     text-align: center;
-    font-size: 5rem;
+    font-size: 2rem;
 }
-section.banner div{
-    background: url(../scr/image\ 2.png) no-repeat  center bottom;
-    margin: 2vw 25vw 2vw 25vw;
+
+section.banner div {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../scr/image\ 2.png) no-repeat center bottom;
+
 }
-section.banner div p{
-    padding: 5vw;
+
+section.banner div p {
     text-align: center;
-    margin: 2vw;
-    
-    
+}
+
+section.banner div p.prim {
+    padding: 15vw 1vw 4vw 1vw;
+}
+
+section.banner div p.second {
+    padding: 0vw 1vw 15vw 1vw;
 }
 
 
-/* === CUIDADOS === */
-section.cuidados{
-    margin: 5vw 10vw 5vw 10vw;
+
+/* === Fotos === */
+section.fotos{
+    margin: 5rem;
+}
+section.fotos nav ul li {
+    padding: 5rem ;
     text-align: center;
 }
-section.cuidados h2{
-    border-bottom: 1px solid black;
-    padding: 0 0 1vw 0;
-    display: inline-block;
-}
-section.cuidados > p{
-    margin: 3vw 15% 3vw 15%;
-}
-section.cuidados p button{
-    color: #458FF6;
-    border: 1px solid #458FF6;
-    background: transparent;
 
-}
-section.cuidados ul{
-    display: flex;
-    text-align: left;
-}
-section.cuidados ul li{
-    border: 2px solid gainsboro;
-    padding: 25px;
-    border-radius: 20px;
-    margin: 0 3vw 0 0;
-}
-section.cuidados ul li:last-child{
-    margin: 0;
-}
-section.cuidados ul li h3{
-    margin: 1vw 0 1vw 0;
-    font-weight: bold;
-}
-section.cuidados ul li p{
-    font-size: 0.8rem;
-    color: rgb(175, 175, 175);
-    line-height: 1.1rem;
+section.fotos nav ul li.OUR a{
+    background: linear-gradient(rgba(66, 64, 64, 0.5), rgba(66, 64, 64, 0.5)), url(../scr/imgs/img\ casal.png) no-repeat center;
+    padding: 15vw 9vw;
+   color: white;
+   border-bottom: 2px solid;
 }
 
 /* === DEPOIMENTOS === */
-section.depoimentos{
+section.depoimentos {
     text-align: center;
     background-color: #5A98F2;
     margin: 0 10vw 0 10vw;
     border-radius: 20px;
     padding: 60px;
 }
-section.depoimentos h2{
+
+section.depoimentos h2 {
     border-bottom: 1px solid white;
     padding: 0 0 1vw 0;
     display: inline-block;
     color: white;
 }
-section.depoimentos div{
+
+section.depoimentos div {
     display: flex;
     justify-content: center;
     margin: 3vw 0 0 0;
 }
-section.depoimentos div p{
+
+section.depoimentos div p {
     text-align: left;
     width: 35%;
     margin: 0 0 0 4vw;
@@ -155,7 +144,7 @@ section.depoimentos div p{
 }
 
 /* === RODAPE === */
-footer{
+footer {
     background-color: #5A98F2;
     color: white;
     margin: 5vw 0 0 0;
@@ -163,17 +152,21 @@ footer{
     display: flex;
     justify-content: space-between;
 }
-footer div p:first-child{
+
+footer div p:first-child {
     margin: 0 0 3vw 0;
 }
-footer div h4{
+
+footer div h4 {
     font-weight: bold;
     margin: 0 0 1vw 0;
 }
-footer div ul li{
+
+footer div ul li {
     margin: 5px 0 5px 0;
 }
-footer a{
+
+footer a {
     color: white;
     font-size: 0.8rem;
 }
