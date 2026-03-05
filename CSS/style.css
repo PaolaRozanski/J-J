@@ -80,7 +80,7 @@ section.banner h2 {
 }
 
 section.banner div {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../scr/image\ 2.png) no-repeat center bottom;
+    background:  url(../scr/image\ 2.png) no-repeat center bottom;
 
 }
 
@@ -100,7 +100,7 @@ section.banner div p.second {
 
 /* === Fotos === */
 section.fotos{
-    margin: 5rem;
+
 }
 section.fotos nav ul li {
     padding: 5rem ;
@@ -114,59 +114,11 @@ section.fotos nav ul li.OUR a{
    border-bottom: 2px solid;
 }
 
-/* === DEPOIMENTOS === */
-section.depoimentos {
-    text-align: center;
-    background-color: #5A98F2;
-    margin: 0 10vw 0 10vw;
-    border-radius: 20px;
-    padding: 60px;
-}
-
-section.depoimentos h2 {
-    border-bottom: 1px solid white;
-    padding: 0 0 1vw 0;
-    display: inline-block;
-    color: white;
-}
-
-section.depoimentos div {
-    display: flex;
-    justify-content: center;
-    margin: 3vw 0 0 0;
-}
-
-section.depoimentos div p {
-    text-align: left;
-    width: 35%;
-    margin: 0 0 0 4vw;
-    color: white;
-}
-
 /* === RODAPE === */
 footer {
-    background-color: #5A98F2;
-    color: white;
+    background-color: #E1DACB;
+    color: rgb(0, 0, 0);
     margin: 5vw 0 0 0;
     padding: 60px 10vw 60px 10vw;
-    display: flex;
-    justify-content: space-between;
-}
 
-footer div p:first-child {
-    margin: 0 0 3vw 0;
-}
-
-footer div h4 {
-    font-weight: bold;
-    margin: 0 0 1vw 0;
-}
-
-footer div ul li {
-    margin: 5px 0 5px 0;
-}
-
-footer a {
-    color: white;
-    font-size: 0.8rem;
 }
