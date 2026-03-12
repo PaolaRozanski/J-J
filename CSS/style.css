@@ -1,124 +1,570 @@
-/* === GERAL === */
-html {
-    font-size: calc(12px + 0.390625vw);
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+
+  --main-bg-color: rgb(255, 255, 255);
+  font-size: clamp(1.3rem, calc(0.9119rem + 0.1136vw), 1.8rem);
+  font-family: 'Crimson Text', serif;
 }
 
 body {
-    font-family: initial;
+  --font-size-min : 18 ; 
+  --font-size-max : 21 ; 
+  --font-view-min : 576 ; 
+  --font-view-max : 1280 ; 
+
+  font-size : clamp ( calc ( var (--font-size-min) * 1px ), calc (( var (--font-size-min) * 1px ) + ( var (--font-size-max) - var (--font-size-min)) * (( 100vw - ( var (--font-view-min) * 1px )) / var (--font-view-max))), calc ( var (--font-size-max) * 1px )); 
+  line-height : 1.6em ; 
+  background: white;
 }
 
-a {
+main {
+  font-size: clamp(1.3rem, calc(0.9119rem + 0.1136vw), 1.8rem);
+}
+
+a{
     text-decoration: none;
-}
-
-h2 {
-    font-size: 2.2rem;
-    font-weight: bold;
     color: black;
 }
 
-button {
-    border-radius: 20px;
-    padding: 10px 20px 10px 20px;
-    margin: 2.5vw 0 0 0;
-    font-size: 1.1rem;
+h1, h2{
+  font-family: 'Julius Sans One', sans-serif;
 }
 
-/* === TOPO === */
+h3, h4, h5, h6 {
+  font-family: 'Crimson Text', serif;
+}
+
+/*Header*/
+
+
 header {
-    padding: 2vw 10vw;
-    background-color: #696865;
+  background-color: #696865;
+  padding: 1rem 0;
 }
 
-header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header div.tudo nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5vw;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-.logo-area {
-    display: flex;
-    align-items: center;
-    gap: 2vw;
+header div.tudo nav ul {
+  display: flex;
+  gap: 3vw;
+  align-items: center;
+  padding: 0;
 }
 
-header h1 {
-    color: #ffffff;
-    font-size: 2rem;
-    font-weight: normal;
+header div.tudo nav div.logo {
+  display: flex;
+  gap: 3vw;
+  align-items: baseline;
 }
 
-header .date {
-    color: #ffffff;
-    font-size: 0.9rem;
+header div.tudo nav div.logo h1 {
+  font-size: clamp(2.25rem, calc(1.4773rem + 0.1136vw), 2.5rem);
 }
 
-header nav ul {
-    display: flex;
+header div.tudo nav div.logo h1 a {
+  color: white;
 }
 
-header nav ul li {
-    margin-left: 5vw;
-    list-style: none;
+header div.tudo nav div.logo p {
+  font-size: clamp(0.75rem, calc(0.7273rem + 0.1136vw), 0.875rem);
+  color: white;
 }
 
-header nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 0.9rem;
-    border-bottom: 2px solid;
+header div.tudo nav ul {
+  display: flex;
+  gap: 3vw;
+  align-items: center;
+}
+
+header div.tudo nav ul li a {
+  color: white;
+  border-bottom: 1.85px solid white;
+  font-weight: lighter;
+  font-family: 'Open Sans', sans-serif;
 }
 
 
+/*Main*/
 
 
-/* === BANNER === */
 section.banner h2 {
-    margin: 1.5rem;
+  font-size: clamp(2.5rem, 8vw, 7.5rem); 
+  margin: 1rem 0;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 15vh 5vw;
+}
+
+section.introducao div.paragrafo {
+  width: 100%;
+  height: 50vw !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  position: relative; 
+  overflow: hidden; 
+}
+
+section.introducao div.paragrafo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50vw;
+  
+  background-image: linear-gradient(#41626959, #41626959), url(../scr/image\ 2.png);
+  background-size: cover;
+  background-position: center;
+  
+  filter: blur(1.5px); 
+
+  transform: scale(1.1); 
+  z-index: 1; 
+}
+
+section.introducao div.paragrafo > * {
+  position: relative;
+  z-index: 2;
+}
+
+section.introducao div.paragrafo p {
+  color: white;
+  padding: 1.5vw;
+  width: 90%; 
+  max-width: 600px;
+  text-align: center;
+}
+
+
+section.paginas div.pags nav ul {
+  margin: 3vw 5vw;
+  display: flex;
+  gap: 3vw;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 5vw;
+}
+
+section.paginas div.pags nav ul li h3.pri {
+  background-image: linear-gradient(rgba(105, 65, 80, 0.2)), url(../scr/imgs/img\ casal.png);
+  border-radius: 0.5rem;
+  background-size: cover;
+  background-position: center;
+  width: 100%; 
+  min-width: 480px;
+  max-width: 700px;
+  aspect-ratio: 5 / 6;
+  height: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+section.paginas div.pags nav ul li h3.pri a{
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+section.paginas div.pags nav ul li h3.seg {
+  background-image: linear-gradient(rgba(105, 65, 80, 0.2)), url(../scr/imgs/img\ buquê.png);
+  border-radius: 0.5rem;
+  background-size: cover;
+  background-position: center;
+  width: 100%; 
+  min-width: 480px;
+  max-width: 700px;
+  aspect-ratio: 5 / 6;
+  height: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+section.paginas div.pags nav ul li h3.seg a{
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+section.paginas div.pags nav ul li h3.ter {
+  background-image: linear-gradient(rgba(105, 65, 80, 0.2)), url(../scr/imgs/img\ cadeiras.png);
+  border-radius: 0.5rem;
+  background-size: cover;
+  background-position: center;
+  width: 100%; 
+  min-width: 480px;
+  max-width: 700px;
+  aspect-ratio: 5 / 6;
+  height: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+section.paginas div.pags nav ul li h3.ter a{
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+section.paginas div.pags nav ul li h3.qua {
+  background-image: linear-gradient(rgba(105, 65, 80, 0.2)), url(../scr/imgs/img\ casal.png);
+  border-radius: 0.5rem;
+  background-size: cover;
+  background-position: center;
+  width: 100%; 
+  min-width: 480px;
+  max-width: 700px;
+  aspect-ratio: 5 / 6;
+  height: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+section.paginas div.pags nav ul li h3.qua a{
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+section.paginas div.pags nav ul li:hover {
+  transform: scale(1.02);
+}
+
+section.registro div.texto{
+  width: 100%;
+  height: 50vw !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  position: relative; 
+  overflow: hidden; 
+}
+
+section.registro div.texto::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50vw;
+  
+  background-image: linear-gradient(#6941503f, #69415015), url(../scr/imgs/image\ 3.png);
+  background-size: cover;
+  background-position: center;
+  
+  filter: blur(1.5px); 
+
+  transform: scale(1.1); 
+  z-index: 1; 
+}
+
+section.registro div.texto > * {
+  position: relative;
+  z-index: 2;
+}
+
+section.registro div.texto h3 {
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  font-weight: 550;
+}
+
+section.registro div.texto p {
+  color: white;
+  padding: 1.5vw;
+  width: 90%; 
+  max-width: 700px;
+  text-align: center;
+}
+
+section.registro div.texto button {
+  background-color: #7D7662;
+  text-transform: uppercase;
+  color: white;
+  border: none;
+  padding: 1vw 12vw;
+  font-size: clamp(0.8rem, calc(0.7273rem + 0.1136vw), 1.2rem);
+  cursor: pointer;
+  border-radius: 100vw;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+section.registro div.texto button:hover {
+  transform: scale(1.02);
+.detalhes {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    padding: 60px 20px;
+    flex-wrap: wrap;
+}
+
+
+.card {
+    width: 450px;
+    height: 600px;
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+}
+.detalhes {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 20px;
+}
+
+.detalhe {
+    width: 450px;
+    height: 600px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+.dress {
+    background-image: url(../scr/image\ 4.png);
+}
+
+.timeline {
+    background-image: url(../scr/image\ 5.png);
+}
+
+.conteudo {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 35px;
     text-align: center;
-    font-size: 2rem;
+    width: 80%;
 }
 
-section.banner div {
-    background:  url(../scr/image\ 2.png) no-repeat center bottom;
-
+/* título */
+.conteudo h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
 }
 
-section.banner div p {
+/* textos */
+.conteudo p {
+    font-size: 16px;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+
+/*FOOTER*/
+.footer {
+  width: 100%;
+  background-color: #d8cfbf; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 800px;
+}
+
+.footer-title {
+  font-family: "Times New Roman", serif;
+  font-size: 42px;
+  letter-spacing: 2px;
+  margin: 0;
+  color: #000;
+}
+
+.footer-day {
+  font-family: "Times New Roman", serif;
+  font-size: 14px;
+  letter-spacing: 3px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.footer-date {
+  font-family: "Times New Roman", serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin: 0;
+  color: #333;
+}
+
+
+/*MEDIA*/
+
+@media (max-width: 600px) {
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  div.pags nav ul li {
+    width: 100%;
+  }
+
+  section.introducao div.paragrafo p{
+    max-width: 340px;
+  }
+
+  section.banner {
+    position: relative;
+    height: 60vw;
+    width: 100%;
+    overflow: hidden; /* Esconde as bordas borradas do efeito blur */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  section.banner::before {
+    content: ""; /*Pra mostrar o que tem no before (ou after)*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60vw;
+
+    background-image: linear-gradient(#41626959, #41626959), url(../src/images/1img.png);
+    background-size: cover;
+    background-position: center;
+    
+
+    filter: blur(1px); 
+    
+    transform: scale(1.1); /* Aumenta o tamanho pro blur não ficar com borda branca */
+    z-index: 1;
+  }
+
+  section.banner h2 {
+    position: relative;
+    z-index: 2; /* Para que o texto fique em cima do fundo */
+    color: white;
+    margin: 0;
     text-align: center;
+    width: 90%;
+    line-height: 1.2;
+    font-size: clamp(2.5rem, 12vw, 4rem);
+    padding: 0;
+  }
+  
+  section.introducao div.paragrafo::before {
+    display: none;
+  }
+
+  section.introducao div.paragrafo {
+    height: auto !important;
+    padding: 2rem 0;
+  }
+
+  section.introducao div.paragrafo p {
+    color: black;
+    font-weight: 600;
+  }
+
+  section.paginas div.pags nav ul li h3.pri {
+  min-width: 280px;
+  max-width: 500px;
 }
 
-section.banner div p.prim {
-    padding: 15vw 1vw 4vw 1vw;
+section.paginas div.pags nav ul li h3.seg { 
+  min-width: 280px;
+  max-width: 500px;
 }
 
-section.banner div p.second {
-    padding: 0vw 1vw 15vw 1vw;
+section.paginas div.pags nav ul li h3.ter {
+  min-width: 280px;
+  max-width: 500px;
 }
 
-
-
-/* === Fotos === */
-section.fotos{
-
-}
-section.fotos nav ul li {
-    padding: 5rem ;
-    text-align: center;
+section.paginas div.pags nav ul li h3.qua { 
+  min-width: 280px;
+  max-width: 500px;
 }
 
-section.fotos nav ul li.OUR a{
-    background: linear-gradient(rgba(66, 64, 64, 0.5), rgba(66, 64, 64, 0.5)), url(../scr/imgs/img\ casal.png) no-repeat center;
-    padding: 15vw 9vw;
-   color: white;
-   border-bottom: 2px solid;
-}
-
-/* === RODAPE === */
-footer {
-    background-color: #E1DACB;
-    color: rgb(0, 0, 0);
-    margin: 5vw 0 0 0;
-    padding: 60px 10vw 60px 10vw;
+section.registro div.texto{
+  height: 95vw !important;
 
 }
+
+section.regitro div.texto p {
+  max-width: 340px;
+}
+
+section.registro div.texto::before {
+  height: 95vw;
+}
+
+section.registro div.texto button {
+  padding: 0.5vw 15vw;
+}
+
+      .detalhes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .detalhe {
+        width: 90%;
+        height: 500px;
+    }
+}
+
+  .footer {
+    padding: 40px 15px;
+  }
+
+  .footer-title {
+    font-size: 32px;
+  }
+
+  .footer-day,
+  .footer-date {
+    font-size: 12px;
+  }
+
