@@ -5,37 +5,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jenny & Jason</title>
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="CSS/reset.css">
+  <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
   <header>
+  <nav class="navbar">
 
-    <div class="tudo">
-      <nav>
-        <div class="logo">
-          <h1><a href="home.html">J & J</a></h1>
-          <p>June 23rd, 2025</p>
-        </div>
-        <ul>
-          <li>
-            <a href="home.html" class="atual">HOME</a>
-          </li>
-          <li>
-            <a href="story.html">OUR STORY</a>
-          </li>
-          <li>
-            <a href="details.html">DETAILS</a>
-          </li>
-          <li>
-            <a href="rsvp.html">RSVP</a>
-          </li>
-        </ul>
-      </nav>
+    <div class="logo">
+      <h1><a href="home.html">J & J</a></h1>
+      <p>June 23rd, 2025</p>
     </div>
 
-  </header>
+    <!-- checkbox controla o menu -->
+    <input type="checkbox" id="menu-check">
+
+    <!-- botão hamburguer -->
+    <label for="menu-check" class="menu-hamburguer">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <!-- menu -->
+    <ul class="nav-links">
+      <li><a href="home.html">HOME</a></li>
+      <li><a href="story.html">OUR STORY</a></li>
+      <li><a href="details.html">DETAILS</a></li>
+      <li><a href="rsvp.html">RSVP</a></li>
+    </ul>
+
+  </nav>
+</header>
   <main>
     <section class="banner">
 
@@ -86,46 +88,48 @@
         </nav>
       </div>
     </section>
-      <section class="registro">
-            <div class="texto">
-                <h3>
-                registry
-            </h3>
-            <p>
-                Your presence is the most cherished gift. Should you wish to contribute, we’ve created a honeymoon registry to help us embark on a memorable adventure to the Amalfi Coast.
-            </p>
-            <button>
-                go to registry
-            </button>
-            </div>
-        </section>
+    <section class="registro">
+      <div class="texto">
+        <h3>
+          registry
+        </h3>
+        <p>
+          Your presence is the most cherished gift. Should you wish to contribute, we’ve created a honeymoon registry to
+          help us embark on a memorable adventure to the Amalfi Coast.
+        </p>
+        <button>
+          go to registry
+        </button>
+      </div>
+    </section>
     <section class="detalhes">
 
-    <div class="detalhe dress">
+      <div class="detalhe dress">
         <div class="conteudo">
-            <h3>Dress Code</h3>
+          <h3>Dress Code</h3>
 
-            <p>The ceremony will be held in a church, so we suggest modest clothing appropriate for a religious setting.</p>
+          <p>The ceremony will be held in a church, so we suggest modest clothing appropriate for a religious setting.
+          </p>
 
-            <p>Please avoid wearing white, traditionally reserved for the bride.</p>
+          <p>Please avoid wearing white, traditionally reserved for the bride.</p>
 
-            <p>We suggest smart casual attire.</p>
+          <p>We suggest smart casual attire.</p>
         </div>
-    </div>
+      </div>
 
-    <div class="detalhe timeline">
+      <div class="detalhe timeline">
         <div class="conteudo">
-            <h3>Wedding Timeline</h3>
+          <h3>Wedding Timeline</h3>
 
-            <p>4:00 PM — Guest reception</p>
-            <p>4:30 PM — Ceremony begins</p>
-            <p>6:00 PM — Photo session</p>
-            <p>7:00 PM — Party begins</p>
-            <p>10:30 PM — Closing</p>
+          <p>4:00 PM — Guest reception</p>
+          <p>4:30 PM — Ceremony begins</p>
+          <p>6:00 PM — Photo session</p>
+          <p>7:00 PM — Party begins</p>
+          <p>10:30 PM — Closing</p>
         </div>
-    </div>
+      </div>
 
-</section>
+    </section>
   </main>
   <footer class="footer">
     <div class="footer-content">
@@ -134,6 +138,7 @@
       <p class="footer-date">SEPTEMBER 20, 2025</p>
     </div>
   </footer>
+
 </body>
 
 </html>

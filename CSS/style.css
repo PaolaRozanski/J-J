@@ -93,7 +93,63 @@ header div.tudo nav ul li a {
   font-weight: lighter;
   font-family: 'Open Sans', sans-serif;
 }
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5vw;
+  position: relative;
+}
 
+.logo{
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+
+.logo h1 a{
+  color: white;
+}
+
+.logo p{
+  color: white;
+  font-size: 0.8rem;
+}
+
+/* menu normal (desktop) */
+
+.nav-links{
+  display: flex;
+  gap: 3vw;
+}
+
+.nav-links a{
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  border-bottom: 1px solid white;
+}
+
+/* checkbox escondido */
+
+#menu-check{
+  display: none;
+}
+
+/* botão hamburguer */
+
+.menu-hamburguer{
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-hamburguer span{
+  width: 28px;
+  height: 3px;
+  background: white;
+  margin: 4px;
+  display: block;
+}
 
 /*Main*/
 
@@ -439,6 +495,31 @@ section.registro div.texto button:hover {
 /*MEDIA*/
 
 @media (max-width: 600px) {
+  .menu-hamburguer{
+    display: flex;
+  }
+
+  .nav-links{
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #696865;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 20px 0;
+  }
+
+  .nav-links li{
+    margin: 10px 0;
+  }
+
+  /* quando clicar no hamburguer */
+
+  #menu-check:checked ~ .nav-links{
+    display: flex;
+  }
 
   p {
     font-size: 1.2rem;
@@ -456,34 +537,34 @@ section.registro div.texto button:hover {
     position: relative;
     height: 60vw;
     width: 100%;
-    overflow: hidden; /* Esconde as bordas borradas do efeito blur */
+    overflow: hidden; 
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
   section.banner::before {
-    content: ""; /*Pra mostrar o que tem no before (ou after)*/
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 60vw;
 
-    background-image: linear-gradient(#41626959, #41626959), url(../src/images/1img.png);
+    background-image: linear-gradient(#41626959, #41626959), url(../scr/image\ 2.png);
     background-size: cover;
     background-position: center;
     
 
     filter: blur(1px); 
     
-    transform: scale(1.1); /* Aumenta o tamanho pro blur não ficar com borda branca */
+    transform: scale(1.1); 
     z-index: 1;
   }
 
   section.banner h2 {
     position: relative;
-    z-index: 2; /* Para que o texto fique em cima do fundo */
+    z-index: 2; 
     color: white;
     margin: 0;
     text-align: center;
